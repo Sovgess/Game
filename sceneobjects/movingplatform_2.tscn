@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b21bviaiw2vjp"]
+
+[ext_resource type="Texture2D" uid="uid://cdfo7hp1mxn7y" path="res://catsis/platform.png" id="1_cxvf8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acles"]
+size = Vector2(36.8125, 4)
+
+[sub_resource type="Animation" id="Animation_oyjup"]
+length = 5.0666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bvx5u"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6n48y"]
+_data = {
+&"RESET": SubResource("Animation_oyjup"),
+&"new_animation": SubResource("Animation_bvx5u")
+}
+
+[node name="movingplatform2" type="Node2D" unique_id=1457422271]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1346084648]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=251528446]
+position = Vector2(10, 0)
+scale = Vector2(1.0178572, 1)
+texture = ExtResource("1_cxvf8")
+region_enabled = true
+region_rect = Rect2(22, 47, 56, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=2093478757]
+position = Vector2(-0.40625, -1)
+shape = SubResource("RectangleShape2D_acles")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=1457897296]
+libraries/ = SubResource("AnimationLibrary_6n48y")
+autoplay = &"RESET"

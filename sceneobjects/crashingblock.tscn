@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b8rjilglpkv2w"]
+
+[ext_resource type="Script" uid="uid://cq04l2jumxkb2" path="res://sceneobjects/crashingblock.gd" id="1_iwvgm"]
+[ext_resource type="Texture2D" uid="uid://dt3y6jf3e8fer" path="res://catsis/crashingtile.png" id="1_j7i60"]
+[ext_resource type="Texture2D" uid="uid://fetmuk34tvba" path="res://catsis/peaces.png" id="3_sw4q1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwvgm"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw4q1"]
+size = Vector2(21, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nigoa"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8ekyv"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_max = 148.01
+angular_velocity_min = -60.000015
+angular_velocity_max = 74.999985
+gravity = Vector3(0, 500, 0)
+anim_offset_max = 1.0
+
+[node name="crashingblock" type="StaticBody2D" unique_id=1902034764]
+script = ExtResource("1_iwvgm")
+
+[node name="Crashingtile" type="Sprite2D" parent="." unique_id=767812418]
+texture = ExtResource("1_j7i60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1060389107]
+shape = SubResource("RectangleShape2D_iwvgm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1392100861]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1660513891]
+position = Vector2(-0.5, -8.5)
+shape = SubResource("RectangleShape2D_sw4q1")
+
+[node name="Timer" type="Timer" parent="." unique_id=1615136328]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1840991258]
+material = SubResource("CanvasItemMaterial_nigoa")
+emitting = false
+texture = ExtResource("3_sw4q1")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_8ekyv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
