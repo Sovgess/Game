@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dcp1rnf7ttpho"]
+
+[ext_resource type="PackedScene" uid="uid://kbn1j2swf8wh" path="res://sceneobjects/crashplatform.tscn" id="1_qjis1"]
+[ext_resource type="Texture2D" uid="uid://bnxty0pcgsxxl" path="res://tiles/industrial.png" id="2_n732k"]
+
+[node name="cpIndustrial" unique_id=383656506 instance=ExtResource("1_qjis1")]
+
+[node name="Crashingplatform" parent="." index="0" unique_id=1029453088]
+position = Vector2(-1, 0)
+texture = ExtResource("2_n732k")
+region_enabled = true
+region_rect = Rect2(48, 96, 32, 8)

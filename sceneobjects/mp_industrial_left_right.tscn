@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bnxty0pcgsxxl" path="res://tiles/industrial.png" id="1_isddk"]
 
 [sub_resource type="Animation" id="Animation_0qx0v"]
-length = 5.0333333
+length = 10.033334
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -12,10 +12,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 5),
+"times": PackedFloat32Array(0, 5, 10),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(50, 0), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(300, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ygoro"]
