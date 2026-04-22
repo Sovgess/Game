@@ -357,8 +357,8 @@ _data = {
 size = Vector2(24, 13)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uchjn"]
-radius = 66.0
-height = 264.0
+radius = 75.0
+height = 310.0
 
 [node name="pump" type="CharacterBody2D" unique_id=1954698031]
 script = ExtResource("1_du0to")
@@ -380,15 +380,18 @@ libraries/ = SubResource("AnimationLibrary_wsiec")
 [node name="attack_direction" type="Node2D" parent="." unique_id=289507123]
 
 [node name="attackrange" type="Area2D" parent="attack_direction" unique_id=54173855]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_direction/attackrange" unique_id=1644179927]
 position = Vector2(12, 2.5)
 shape = SubResource("RectangleShape2D_uchjn")
 
 [node name="Detector" type="Area2D" parent="." unique_id=2017666877]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=2077938163]
-visible = false
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_uchjn")
 

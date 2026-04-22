@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Новый игровой проект"
-run/main_scene="uid://dsp37j5dpi64f"
+run/main_scene="uid://c2xtrwr6bqm71"
 config/features=PackedStringArray("4.6", "Mobile")
+
+[autoload]
+
+Global="*uid://erme56pm1413"
 
 [editor_plugins]
 
@@ -42,6 +46,7 @@ left={
 2d_physics/layer_1="world"
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemies"
+2d_physics/layer_4="traps"
 
 [navigation]
 

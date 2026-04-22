@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dvw60oatmdvjd"]
+
+[ext_resource type="PackedScene" uid="uid://vbvg301subjx" path="res://scene/parallax_background_4.tscn" id="1_5f1b4"]
+[ext_resource type="Script" uid="uid://bdbqlu425b2v8" path="res://scene/deadmenu.gd" id="1_i4ftr"]
+[ext_resource type="FontFile" uid="uid://s84opdnuvf84" path="res://catsis/Akedopikuseru-Regular.otf" id="2_i4ftr"]
+[ext_resource type="Texture2D" uid="uid://b5kmfyckaded1" path="res://catsis/button3.png" id="3_dhovb"]
+[ext_resource type="Texture2D" uid="uid://drqqfsqsei5bv" path="res://catsis/menutiles/button3hoved.png" id="4_o3rvg"]
+
+[node name="Deadmenu" type="Node2D" unique_id=543557479]
+script = ExtResource("1_i4ftr")
+
+[node name="ParallaxBackground4" parent="." unique_id=669383789 instance=ExtResource("1_5f1b4")]
+
+[node name="Label" type="Label" parent="." unique_id=1799330288]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = 168.0
+offset_right = 907.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.27058825, 0.05490196, 0.16470589, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_i4ftr")
+theme_override_font_sizes/font_size = 36
+text = "You are dead!
+Wanna try again?"
+horizontal_alignment = 1
+
+[node name="Yes" type="TextureButton" parent="." unique_id=1309245329]
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 480.0
+texture_normal = ExtResource("3_dhovb")
+texture_hover = ExtResource("4_o3rvg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Yes" unique_id=534331069]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -11.5
+offset_right = 35.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.27058825, 0.05490196, 0.16470589, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_i4ftr")
+theme_override_font_sizes/font_size = 29
+text = "Yes"
+
+[node name="No" type="TextureButton" parent="." unique_id=769436126]
+offset_left = 608.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 480.0
+texture_normal = ExtResource("3_dhovb")
+texture_hover = ExtResource("4_o3rvg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="No" unique_id=1292371798]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -16.0
+offset_right = 34.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.27058825, 0.05490196, 0.16470589, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_i4ftr")
+theme_override_font_sizes/font_size = 29
+text = "No"
+
+[connection signal="pressed" from="Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="No" to="." method="_on_no_pressed"]

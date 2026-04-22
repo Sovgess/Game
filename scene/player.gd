@@ -25,6 +25,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().name == "TileMapSpikes":
+			take_damage(100)
+	
 	if is_dead:
 		move_and_slide()
 		return
@@ -69,7 +74,8 @@ func take_damage(damage):
 		anim.play("die")
 		velocity.x = 0
 		await anim.animation_finished
-		get_tree().change_scene_to_file("res://scene/menu.tscn")
+		Global.last_level_path = get_tree().current_scene.scene_file_path
+		get_tree().change_scene_to_file("res://scene/deadmenu.tscn")
 	
 
 	

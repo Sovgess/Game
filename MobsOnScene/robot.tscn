@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://c8irey4recjg4"]
+
+[ext_resource type="Script" uid="uid://c5mimlcb7hmb4" path="res://MobsOnScene/robot.gd" id="1_4a171"]
+[ext_resource type="Texture2D" uid="uid://dwx4gf8sgi2xr" path="res://mobsfiles/robot.png" id="1_clgi2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a171"]
+atlas = ExtResource("1_clgi2")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exode"]
+atlas = ExtResource("1_clgi2")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkiyc"]
+atlas = ExtResource("1_clgi2")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpk7i"]
+atlas = ExtResource("1_clgi2")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0uhn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exode")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkiyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpk7i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ui4ns"]
+radius = 6.8862476
+height = 25.990276
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkx7r"]
+radius = 11.0
+
+[node name="robot" type="Area2D" unique_id=1890662688]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_4a171")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1379705317]
+scale = Vector2(0.8723958, 0.9394531)
+sprite_frames = SubResource("SpriteFrames_0uhn5")
+animation = &"walk"
+autoplay = "walk"
+frame = 2
+frame_progress = 0.24411756
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1005410178]
+position = Vector2(0, 1.1774194)
+rotation = -1.5707964
+scale = Vector2(1.1875, 1.1406251)
+shape = SubResource("CapsuleShape2D_ui4ns")
+
+[node name="Timer" type="Timer" parent="." unique_id=1327214489]
+wait_time = 3.0
+autostart = true
+
+[node name="herodies" type="Area2D" parent="." unique_id=1865378963]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="herodies" unique_id=192463171]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_nkx7r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="herodies" to="." method="_on_herodies_body_entered"]
