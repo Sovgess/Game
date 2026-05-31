@@ -1,9 +1,7 @@
 extends Area2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D 
-@onready var player = $"../../Player/player"
 const SPEED = 70
 var direction = -1
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,4 +20,4 @@ func _on_timer_timeout() -> void:
 
 func _on_herodies_body_entered(body: Node2D) -> void:
 	if body.name == "player":
-		player.take_damage(50)
+		body.take_damage(50)

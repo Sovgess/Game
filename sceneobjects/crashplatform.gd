@@ -35,3 +35,4 @@ func _on_timer_respawn_timeout() -> void:
 	$CollisionShape2D.disabled = false
 	$Crashingplatform.visible = true
 	$Area2D.monitoring = true
+	

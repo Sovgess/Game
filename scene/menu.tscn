@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://s84opdnuvf84" path="res://catsis/Akedopikuseru-Regular.otf" id="5_1qlln"]
 [ext_resource type="Texture2D" uid="uid://b70mlki5x5nat" path="res://catsis/menutiles/pressedbutton.png" id="5_vi6sp"]
 [ext_resource type="PackedScene" uid="uid://b3bynvjvnx5at" path="res://scene/parallax_background_3.tscn" id="6_vi6sp"]
+[ext_resource type="Texture2D" uid="uid://dynp7ya1jrdx" path="res://catsis/menutiles/girl.png" id="7_wd6lm"]
+[ext_resource type="Texture2D" uid="uid://d3bthoecj6q73" path="res://catsis/menutiles/label1.png" id="8_nuiae"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wd6lm"]
 atlas = ExtResource("4_vi6sp")
@@ -15,15 +17,16 @@ position = Vector2(1, 3)
 script = ExtResource("1_lti8b")
 
 [node name="Mainmenu" type="Sprite2D" parent="." unique_id=196092674]
+visible = false
 position = Vector2(576, 321)
 scale = Vector2(1.9965279, 2)
 texture = ExtResource("3_xs5te")
 
 [node name="Levels" type="TextureButton" parent="." unique_id=378547204]
-offset_left = 165.0
-offset_top = 315.0
-offset_right = 453.0
-offset_bottom = 429.0
+offset_left = 199.0
+offset_top = 301.0
+offset_right = 487.0
+offset_bottom = 415.0
 texture_normal = SubResource("AtlasTexture_wd6lm")
 texture_hover = ExtResource("5_vi6sp")
 stretch_mode = 5
@@ -48,10 +51,10 @@ theme_override_font_sizes/font_size = 25
 text = "Levels"
 
 [node name="Quit" type="TextureButton" parent="." unique_id=1886514532]
-offset_left = 165.0
-offset_top = 437.0
-offset_right = 453.0
-offset_bottom = 551.0
+offset_left = 199.0
+offset_top = 429.0
+offset_right = 487.0
+offset_bottom = 543.0
 texture_normal = SubResource("AtlasTexture_wd6lm")
 texture_hover = ExtResource("5_vi6sp")
 stretch_mode = 5
@@ -76,6 +79,16 @@ theme_override_font_sizes/font_size = 25
 text = "Quit"
 
 [node name="ParallaxBackground3" parent="." unique_id=669383789 instance=ExtResource("6_vi6sp")]
+
+[node name="Girl" type="Sprite2D" parent="." unique_id=2130432357]
+position = Vector2(637.00006, 354)
+scale = Vector2(1.7847222, 1.8055556)
+texture = ExtResource("7_wd6lm")
+
+[node name="Label1" type="Sprite2D" parent="." unique_id=1435980651]
+position = Vector2(607, 309)
+scale = Vector2(1.9982638, 2.0030863)
+texture = ExtResource("8_nuiae")
 
 [connection signal="pressed" from="Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

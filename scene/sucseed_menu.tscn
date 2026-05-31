@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://mtw8pbmadmav"]
+
+[ext_resource type="Script" uid="uid://doytwxh4pbyyo" path="res://scene/sucseed_menu.gd" id="1_7rf24"]
+[ext_resource type="PackedScene" uid="uid://b3bynvjvnx5at" path="res://scene/parallax_background_3.tscn" id="1_qnd54"]
+[ext_resource type="Texture2D" uid="uid://cusow4f1eusr" path="res://catsis/menutiles/sucseed.png" id="2_7rf24"]
+[ext_resource type="FontFile" uid="uid://s84opdnuvf84" path="res://catsis/Akedopikuseru-Regular.otf" id="3_sut4r"]
+[ext_resource type="Texture2D" uid="uid://cb0flp3oy8xhk" path="res://catsis/menutiles/button.png" id="4_a6jkx"]
+[ext_resource type="Texture2D" uid="uid://b70mlki5x5nat" path="res://catsis/menutiles/pressedbutton.png" id="5_5i57j"]
+[ext_resource type="Texture2D" uid="uid://b7ptx6g124vgi" path="res://catsis/gold_.png" id="7_sut4r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyuna"]
+atlas = ExtResource("4_a6jkx")
+
+[node name="SucseedMenu" type="Node2D" unique_id=1698502890]
+script = ExtResource("1_7rf24")
+
+[node name="ParallaxBackground3" parent="." unique_id=669383789 instance=ExtResource("1_qnd54")]
+
+[node name="Sucseed" type="Sprite2D" parent="." unique_id=1782526302]
+position = Vector2(304, 328)
+scale = Vector2(2.438749, 2.37375)
+texture = ExtResource("2_7rf24")
+
+[node name="Label" type="Label" parent="." unique_id=1491962960]
+offset_left = 520.0
+offset_top = 120.0
+offset_right = 1103.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0.7411765, 0.49803922, 0.9411765, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_sut4r")
+theme_override_font_sizes/font_size = 34
+text = "Level Complete "
+
+[node name="Label" type="Label" parent="Label" unique_id=708737721]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 72.0
+offset_right = 417.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0.7411765, 0.49803922, 0.9411765, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_sut4r")
+theme_override_font_sizes/font_size = 25
+text = "Coins:"
+
+[node name="Gold" type="Sprite2D" parent="Label/Label" unique_id=1232993957]
+position = Vector2(24, 72)
+scale = Vector2(3.9023457, 3.7207036)
+texture = ExtResource("7_sut4r")
+
+[node name="NextLevel" type="TextureButton" parent="." unique_id=201429096]
+offset_left = 632.0
+offset_top = 312.0
+offset_right = 936.0
+offset_bottom = 432.0
+texture_normal = SubResource("AtlasTexture_gyuna")
+texture_hover = ExtResource("5_5i57j")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="NextLevel" unique_id=199173343]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -10.0
+offset_right = 37.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7411765, 0.49803922, 0.9411765, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_sut4r")
+theme_override_font_sizes/font_size = 20
+text = "Next level"
+
+[node name="Menu" type="TextureButton" parent="." unique_id=1082621220]
+offset_left = 664.0
+offset_top = 448.0
+offset_right = 896.0
+offset_bottom = 528.0
+texture_normal = SubResource("AtlasTexture_gyuna")
+texture_hover = ExtResource("5_5i57j")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Menu" unique_id=1460084217]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -10.0
+offset_right = 37.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7411765, 0.49803922, 0.9411765, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("3_sut4r")
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+
+[node name="GoldLabel" type="Label" parent="." unique_id=510118771]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 776.0
+offset_top = 256.0
+offset_right = 872.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7411765, 0.49803922, 0.9411765, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_sut4r")
+theme_override_font_sizes/font_size = 25
+text = "num"
+
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
