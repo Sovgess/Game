@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://jb137xrpl7yp" path="res://catsis/healthbar11.png" id="15_71y6i"]
 [ext_resource type="Texture2D" uid="uid://dkkhvh82fv2hd" path="res://catsis/heart_.png" id="16_o5yjy"]
 [ext_resource type="Texture2D" uid="uid://b7ptx6g124vgi" path="res://catsis/gold_.png" id="17_o86tu"]
-[ext_resource type="AudioStream" uid="uid://bhgntd1bsxdp8" path="res://sounds/akiko_kouru_-_saund_nightcorebot_(SkySound.cc) [music].mp3" id="18_im4cd"]
 [ext_resource type="PackedScene" uid="uid://cfkegfyfnh2k3" path="res://sceneobjects/movingplatform.tscn" id="19_hlmt0"]
 [ext_resource type="PackedScene" uid="uid://b21bviaiw2vjp" path="res://sceneobjects/movingplatform_2.tscn" id="20_oonke"]
 [ext_resource type="PackedScene" uid="uid://kbn1j2swf8wh" path="res://sceneobjects/crashplatform.tscn" id="22_ievow"]
@@ -1173,11 +1172,6 @@ texture = ExtResource("16_o5yjy")
 position = Vector2(73, 76)
 scale = Vector2(2.4374995, 2.531249)
 texture = ExtResource("17_o86tu")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=985921162]
-position = Vector2(560, 360)
-stream = ExtResource("18_im4cd")
-autoplay = true
 
 [node name="platforms" type="Node2D" parent="." unique_id=1962948005]
 

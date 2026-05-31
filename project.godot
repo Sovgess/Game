@@ -18,6 +18,11 @@ config/features=PackedStringArray("4.6", "Mobile")
 
 Global="*uid://erme56pm1413"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
