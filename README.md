@@ -1,6 +1,6 @@
 # Sky Ascent
 
- [Смотреть геймплей]([https://disk.yandex.ru/i/V7YDc4Cpxm-0HA](https://rutube.ru/video/47cb9a70db941c7a8299645a99f3b85a/))
+ [Смотреть геймплей](https://rutube.ru/video/47cb9a70db941c7a8299645a99f3b85a/)
 
 ---
 
