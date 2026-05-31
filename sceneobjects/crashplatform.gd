@@ -8,27 +8,29 @@ func _ready():
 
 func _process(delta):
 	time += 1.7
+	# Создаёт эффект дрожания платформы перед разрушением
 	$Crashingplatform.position += Vector2(0, sin(time) * 2)
-
 
 func _on_area_2d_body_entered(body):
 	if body.name == "player" and broken == false:
+		# Запускаем анимацию предупреждения
 		set_process(true)
+		# Через 0.7 сек платформа разрушится
 		$TimerBreak.start(0.7)
 
 func _on_timer_break_timeout() -> void:
 	broken = true
 	set_process(false)
-
+	# Отключаем физику и визуально скрываем платформу
 	$GPUParticles2D.emitting = true
 	$CollisionShape2D.disabled = true
 	$Crashingplatform.visible = false
 	$Area2D.monitoring = false
-
+	# Запускаем таймер восстановления
 	$TimerRespawn.start(4.0)
 
-
 func _on_timer_respawn_timeout() -> void:
+	# Возвращаем платформу в исходное состояние
 	broken = false
 
 	$GPUParticles2D.emitting = false

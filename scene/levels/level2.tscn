@@ -1,32 +1,32 @@
 [gd_scene format=4 uid="uid://bn8qs0jn2o5as"]
 
-[ext_resource type="Script" uid="uid://y455rxkd3em3" path="res://scene/level_1.gd" id="1_p82d5"]
-[ext_resource type="PackedScene" uid="uid://c06thg3ldcq8n" path="res://scene/parallax_background_5.tscn" id="2_25wu5"]
-[ext_resource type="FontFile" uid="uid://s84opdnuvf84" path="res://catsis/Akedopikuseru-Regular.otf" id="4_hftol"]
-[ext_resource type="PackedScene" uid="uid://11mh0a4ny3qs" path="res://collects/gold.tscn" id="6_wyauo"]
-[ext_resource type="Texture2D" uid="uid://djsb1yvfwyfq1" path="res://tiles/tileset.png" id="7_6fca0"]
-[ext_resource type="Texture2D" uid="uid://cvtr256ahpf4d" path="res://tiles/tileeset.png" id="8_ous5c"]
-[ext_resource type="Texture2D" uid="uid://cnx8ffjn0dns7" path="res://tiles/sett.png" id="9_un6i5"]
-[ext_resource type="Texture2D" uid="uid://btbfl8fsi3sci" path="res://tiles/stone.png" id="10_y8ddk"]
-[ext_resource type="Texture2D" uid="uid://c3h8tyq4bbthj" path="res://catsis/treee_0001.png" id="11_1u4ba"]
-[ext_resource type="Texture2D" uid="uid://cji7kwufpd3v3" path="res://fire/blue/огонь.png" id="12_y067u"]
-[ext_resource type="Texture2D" uid="uid://fgu8uypg3q2v" path="res://catsis/spikes.png" id="13_udd0b"]
-[ext_resource type="PackedScene" uid="uid://csvnxwbpljvax" path="res://scene/player.tscn" id="14_2xnml"]
-[ext_resource type="Texture2D" uid="uid://bwrfdftf0nh77" path="res://catsis/healthbar2.png" id="15_ubsfo"]
-[ext_resource type="Texture2D" uid="uid://ckoebqrkeg4q8" path="res://catsis/healthbar3.png" id="16_qaaoc"]
-[ext_resource type="Texture2D" uid="uid://jb137xrpl7yp" path="res://catsis/healthbar11.png" id="17_bm1cp"]
-[ext_resource type="Texture2D" uid="uid://dkkhvh82fv2hd" path="res://catsis/heart_.png" id="18_lkfst"]
-[ext_resource type="Texture2D" uid="uid://b7ptx6g124vgi" path="res://catsis/gold_.png" id="19_yx04y"]
-[ext_resource type="AudioStream" uid="uid://bhgntd1bsxdp8" path="res://sounds/akiko_kouru_-_saund_nightcorebot_(SkySound.cc) [music].mp3" id="20_fqm3u"]
-[ext_resource type="PackedScene" uid="uid://kbn1j2swf8wh" path="res://sceneobjects/crashplatform.tscn" id="21_rc1l8"]
-[ext_resource type="PackedScene" uid="uid://b21bviaiw2vjp" path="res://sceneobjects/movingplatform_2.tscn" id="22_is2xd"]
-[ext_resource type="PackedScene" uid="uid://0n8y4umwrlyd" path="res://sceneobjects/exitt.tscn" id="23_1d5iv"]
-[ext_resource type="PackedScene" uid="uid://cfkegfyfnh2k3" path="res://sceneobjects/movingplatform.tscn" id="23_xgwsu"]
-[ext_resource type="PackedScene" uid="uid://x55kn4okastt" path="res://MobsOnScene/bat.tscn" id="24_ul6m1"]
+[ext_resource type="Script" uid="uid://y455rxkd3em3" path="res://scene/level_1.gd" id="1_3opm6"]
+[ext_resource type="PackedScene" uid="uid://c06thg3ldcq8n" path="res://scene/parallax_background_5.tscn" id="2_cqp6a"]
+[ext_resource type="Texture2D" uid="uid://djsb1yvfwyfq1" path="res://tiles/tileset.png" id="4_xi1au"]
+[ext_resource type="Texture2D" uid="uid://cvtr256ahpf4d" path="res://tiles/tileeset.png" id="5_voblf"]
+[ext_resource type="Texture2D" uid="uid://cnx8ffjn0dns7" path="res://tiles/sett.png" id="6_nec7y"]
+[ext_resource type="PackedScene" uid="uid://11mh0a4ny3qs" path="res://collects/gold.tscn" id="7_ggcsn"]
+[ext_resource type="Texture2D" uid="uid://btbfl8fsi3sci" path="res://tiles/stone.png" id="7_x6pf2"]
+[ext_resource type="Texture2D" uid="uid://c3h8tyq4bbthj" path="res://catsis/treee_0001.png" id="8_ak5bh"]
+[ext_resource type="Texture2D" uid="uid://cji7kwufpd3v3" path="res://fire/blue/огонь.png" id="9_2r7bd"]
+[ext_resource type="Texture2D" uid="uid://fgu8uypg3q2v" path="res://catsis/spikes.png" id="10_w0dsg"]
+[ext_resource type="Texture2D" uid="uid://dkkhvh82fv2hd" path="res://catsis/heart_.png" id="11_68ptg"]
+[ext_resource type="PackedScene" uid="uid://x55kn4okastt" path="res://MobsOnScene/bat.tscn" id="12_6s2ev"]
+[ext_resource type="Texture2D" uid="uid://b7ptx6g124vgi" path="res://catsis/gold_.png" id="12_cmtua"]
+[ext_resource type="FontFile" uid="uid://s84opdnuvf84" path="res://catsis/Akedopikuseru-Regular.otf" id="15_j66qu"]
+[ext_resource type="PackedScene" uid="uid://csvnxwbpljvax" path="res://scene/player.tscn" id="18_mssxu"]
+[ext_resource type="PackedScene" uid="uid://cfkegfyfnh2k3" path="res://sceneobjects/movingplatform.tscn" id="21_8r45m"]
+[ext_resource type="PackedScene" uid="uid://0n8y4umwrlyd" path="res://sceneobjects/exitt.tscn" id="21_rthh6"]
+[ext_resource type="PackedScene" uid="uid://b21bviaiw2vjp" path="res://sceneobjects/movingplatform_2.tscn" id="22_d3mie"]
+[ext_resource type="Texture2D" uid="uid://bwrfdftf0nh77" path="res://catsis/healthbar2.png" id="22_lbg1p"]
+[ext_resource type="Texture2D" uid="uid://ckoebqrkeg4q8" path="res://catsis/healthbar3.png" id="23_ia7d2"]
+[ext_resource type="PackedScene" uid="uid://kbn1j2swf8wh" path="res://sceneobjects/crashplatform.tscn" id="23_xjj63"]
+[ext_resource type="Texture2D" uid="uid://jb137xrpl7yp" path="res://catsis/healthbar11.png" id="24_vv254"]
+[ext_resource type="AudioStream" uid="uid://bhgntd1bsxdp8" path="res://sounds/akiko_kouru_-_saund_nightcorebot_(SkySound.cc) [music].mp3" id="27_txiyo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2orkt"]
 resource_name = "touchable"
-texture = ExtResource("7_6fca0")
+texture = ExtResource("4_xi1au")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -255,7 +255,7 @@ texture = ExtResource("7_6fca0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42xju"]
 resource_name = "untouchable"
-texture = ExtResource("7_6fca0")
+texture = ExtResource("4_xi1au")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -397,7 +397,7 @@ texture = ExtResource("7_6fca0")
 9:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aoqsc"]
-texture = ExtResource("8_ous5c")
+texture = ExtResource("5_voblf")
 3:0/0 = 0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.879076, 8, 8, 0.5583906, 8)
 4:0/0 = 0
@@ -590,7 +590,7 @@ texture = ExtResource("8_ous5c")
 17:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mleqk"]
-texture = ExtResource("9_un6i5")
+texture = ExtResource("6_nec7y")
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
@@ -821,7 +821,7 @@ texture = ExtResource("9_un6i5")
 8:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xqk2"]
-texture = ExtResource("10_y8ddk")
+texture = ExtResource("7_x6pf2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -978,7 +978,7 @@ sources/7 = SubResource("TileSetAtlasSource_mleqk")
 sources/8 = SubResource("TileSetAtlasSource_2xqk2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilwjd"]
-texture = ExtResource("11_1u4ba")
+texture = ExtResource("8_ak5bh")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -1038,7 +1038,7 @@ texture = ExtResource("11_1u4ba")
 10:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3yai"]
-texture = ExtResource("12_y067u")
+texture = ExtResource("9_2r7bd")
 0:0/animation_columns = 8
 0:0/animation_speed = 10.0
 0:0/animation_frame_0/duration = 1.0
@@ -1067,7 +1067,7 @@ sources/2 = SubResource("TileSetAtlasSource_ilwjd")
 sources/5 = SubResource("TileSetAtlasSource_u3yai")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iug7g"]
-texture = ExtResource("13_udd0b")
+texture = ExtResource("10_w0dsg")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.586399, 1.2590122, -0.4496479, 8, 3.8669624, 1.4388714, 8, 8, -8, 8)
 
@@ -1091,27 +1091,27 @@ func _process(delta: float) -> void:
 "
 
 [node name="Level" type="Node2D" unique_id=1691026003]
-script = ExtResource("1_p82d5")
+script = ExtResource("1_3opm6")
 
-[node name="ParallaxBackground5" parent="." unique_id=669383789 instance=ExtResource("2_25wu5")]
+[node name="ParallaxBackground5" parent="." unique_id=669383789 instance=ExtResource("2_cqp6a")]
 
 [node name="sceneobjects" type="Node2D" parent="." unique_id=1001895922]
 
 [node name="collecs" type="Node2D" parent="sceneobjects" unique_id=1919137149]
 
-[node name="gold" parent="sceneobjects/collecs" unique_id=1790294637 instance=ExtResource("6_wyauo")]
+[node name="gold" parent="sceneobjects/collecs" unique_id=1790294637 instance=ExtResource("7_ggcsn")]
 position = Vector2(105, 88)
 
-[node name="gold2" parent="sceneobjects/collecs" unique_id=1210394082 instance=ExtResource("6_wyauo")]
+[node name="gold2" parent="sceneobjects/collecs" unique_id=1210394082 instance=ExtResource("7_ggcsn")]
 position = Vector2(384, 343)
 
-[node name="gold3" parent="sceneobjects/collecs" unique_id=1243235704 instance=ExtResource("6_wyauo")]
+[node name="gold3" parent="sceneobjects/collecs" unique_id=1243235704 instance=ExtResource("7_ggcsn")]
 position = Vector2(384, 245)
 
-[node name="gold4" parent="sceneobjects/collecs" unique_id=1677424894 instance=ExtResource("6_wyauo")]
+[node name="gold4" parent="sceneobjects/collecs" unique_id=1677424894 instance=ExtResource("7_ggcsn")]
 position = Vector2(595, 74)
 
-[node name="gold5" parent="sceneobjects/collecs" unique_id=824312012 instance=ExtResource("6_wyauo")]
+[node name="gold5" parent="sceneobjects/collecs" unique_id=824312012 instance=ExtResource("7_ggcsn")]
 position = Vector2(944, 133)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1886285509]
@@ -1135,8 +1135,8 @@ tile_set = SubResource("TileSet_w5wi5")
 [node name="Player" type="Node2D" parent="." unique_id=233018027]
 position = Vector2(-424, -24)
 
-[node name="player" parent="Player" unique_id=87707945 instance=ExtResource("14_2xnml")]
-position = Vector2(1141, 209)
+[node name="player" parent="Player" unique_id=87707945 instance=ExtResource("18_mssxu")]
+position = Vector2(474, 368)
 
 [node name="Camera2D2" type="Camera2D" parent="Player/player" unique_id=2039584173]
 zoom = Vector2(2.4, 2.4)
@@ -1149,10 +1149,10 @@ position_smoothing_speed = 3.0
 
 [node name="Mobs" type="Node2D" parent="." unique_id=751961917]
 
-[node name="bat" parent="Mobs" unique_id=1890662688 instance=ExtResource("24_ul6m1")]
+[node name="bat" parent="Mobs" unique_id=1890662688 instance=ExtResource("12_6s2ev")]
 position = Vector2(309, 168)
 
-[node name="bat2" parent="Mobs" unique_id=1497514243 instance=ExtResource("24_ul6m1")]
+[node name="bat2" parent="Mobs" unique_id=1497514243 instance=ExtResource("12_6s2ev")]
 position = Vector2(1122, 376)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565013820]
@@ -1165,7 +1165,7 @@ offset_bottom = 107.0
 theme_override_colors/font_color = Color(0.6862745, 0.50980395, 0.85490197, 1)
 theme_override_colors/font_outline_color = Color(0.078431375, 0.09411765, 0.18039216, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = ExtResource("4_hftol")
+theme_override_fonts/font = ExtResource("15_j66qu")
 theme_override_font_sizes/font_size = 22
 text = "1"
 script = SubResource("GDScript_km5ld")
@@ -1177,45 +1177,45 @@ offset_right = 275.0
 offset_bottom = 47.0
 value = 50.0
 nine_patch_stretch = true
-texture_under = ExtResource("15_ubsfo")
-texture_over = ExtResource("16_qaaoc")
-texture_progress = ExtResource("17_bm1cp")
+texture_under = ExtResource("22_lbg1p")
+texture_over = ExtResource("23_ia7d2")
+texture_progress = ExtResource("24_vv254")
 
 [node name="Heart" type="Sprite2D" parent="CanvasLayer" unique_id=2073990215]
 position = Vector2(75, 32)
 scale = Vector2(3.4999998, 3.5)
-texture = ExtResource("18_lkfst")
+texture = ExtResource("11_68ptg")
 
 [node name="Gold" type="Sprite2D" parent="CanvasLayer" unique_id=1987860761]
 position = Vector2(73, 76)
 scale = Vector2(2.4374995, 2.531249)
-texture = ExtResource("19_yx04y")
+texture = ExtResource("12_cmtua")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=985921162]
 position = Vector2(560, 360)
-stream = ExtResource("20_fqm3u")
+stream = ExtResource("27_txiyo")
 autoplay = true
 
 [node name="platforms" type="Node2D" parent="." unique_id=1962948005]
 
-[node name="crashplatform" parent="platforms" unique_id=383656506 instance=ExtResource("21_rc1l8")]
+[node name="crashplatform" parent="platforms" unique_id=383656506 instance=ExtResource("23_xjj63")]
 position = Vector2(105, 130)
 
-[node name="movingplatform2" parent="platforms" unique_id=1457422271 instance=ExtResource("22_is2xd")]
+[node name="movingplatform2" parent="platforms" unique_id=1457422271 instance=ExtResource("22_d3mie")]
 position = Vector2(796, 286)
 
-[node name="movingplatform" parent="platforms" unique_id=1893189286 instance=ExtResource("23_xgwsu")]
+[node name="movingplatform" parent="platforms" unique_id=1893189286 instance=ExtResource("21_8r45m")]
 position = Vector2(279, 257)
 
-[node name="crashplatform2" parent="platforms" unique_id=1646628904 instance=ExtResource("21_rc1l8")]
+[node name="crashplatform2" parent="platforms" unique_id=1646628904 instance=ExtResource("23_xjj63")]
 position = Vector2(859, 196)
 
-[node name="crashplatform3" parent="platforms" unique_id=911886253 instance=ExtResource("21_rc1l8")]
+[node name="crashplatform3" parent="platforms" unique_id=911886253 instance=ExtResource("23_xjj63")]
 position = Vector2(1487, 306)
 
-[node name="crashplatform4" parent="platforms" unique_id=673763630 instance=ExtResource("21_rc1l8")]
+[node name="crashplatform4" parent="platforms" unique_id=673763630 instance=ExtResource("23_xjj63")]
 position = Vector2(1581, 306)
 
-[node name="Exitt" parent="." unique_id=926106123 instance=ExtResource("23_1d5iv")]
+[node name="Exitt" parent="." unique_id=926106123 instance=ExtResource("21_rthh6")]
 position = Vector2(1978, 369)
 next_level = "uid://c2xtrwr6bqm71"

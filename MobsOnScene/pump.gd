@@ -5,13 +5,14 @@ extends CharacterBody2D
 var speed = 100
 var chase = false
 var direction
-
+# Возможные состояния противника
 enum {
-	IDLE,
-	ATTACK,
-	CHASE,
+	IDLE,# стоит на месте
+	ATTACK,# атакует
+	CHASE,# преследует игрока
 }
-var state: int = 0: # Когда будет любое значение кроме нуля воспроизведется то что ниже
+# При изменении состояния автоматически запускается соответствующая логика
+var state: int = 0:
 	set(value):
 		state = value
 		match state:
@@ -20,9 +21,7 @@ var state: int = 0: # Когда будет любое значение кром
 			ATTACK:
 				attack_state()
 
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -46,11 +45,10 @@ func _on_detector_body_exited(body: Node2D) -> void:
 	if body.name == "player":
 		state = IDLE
 
-		
-		
 func chase_state():
+	# Определяем направление на игрока
 	direction = sign(player.global_position - global_position)
-	velocity.x = direction.x * speed
+	velocity.x = direction.x * speed # Разворачиваем модель и область атаки в сторону движения
 	anim.play('run')
 	if direction.x < 0:
 		$attack_direction.scale.x = -1
@@ -65,6 +63,8 @@ func attack_state():
 	anim.play("attack")
 	player.take_damage(20)
 	await anim.animation_finished
+	# Перезапускаем область удара,
+	# чтобы можно было атаковать снова
 	$attack_direction/attackrange/CollisionShape2D.disabled = true
 	$attack_direction/attackrange/CollisionShape2D.disabled = false
 	state = CHASE

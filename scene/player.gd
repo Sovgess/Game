@@ -11,6 +11,7 @@ var gold = 0
 var is_dead = false
 
 func spring():
+	# Усиленный прыжок при контакте с пружиной
 	velocity.y = -700
 
 func _ready():
@@ -27,10 +28,12 @@ func _physics_process(delta: float) -> void:
 		
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
+		# Если столкнулись с тайлами шипов — убиваем игрока
 		if collision.get_collider().name == "TileMapSpikes":
 			take_damage(100)
 	
 	if is_dead:
+		# После смерти игрок больше не может управляться
 		move_and_slide()
 		return
 	
@@ -64,7 +67,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func take_damage(damage):
-	if is_dead:
+	if is_dead: # Защита от повторной обработки смерти
 		return
 	health -= damage
 	hp.value = health
@@ -74,6 +77,7 @@ func take_damage(damage):
 		anim.play("die")
 		velocity.x = 0
 		await anim.animation_finished
+		# Запоминаем уровень для перезапуска
 		Global.last_level_path = get_tree().current_scene.scene_file_path
 		get_tree().change_scene_to_file("res://scene/deadmenu.tscn")
 	

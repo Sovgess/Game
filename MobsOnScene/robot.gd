@@ -4,20 +4,13 @@ extends Area2D
 const SPEED = 70
 var direction = 1
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
 	
-
 func _on_timer_timeout() -> void:
+	# Меняем направление патрулирования
 	direction *= -1 
 	animated_sprite_2d.flip_h = !animated_sprite_2d.flip_h 
-	
 
 func _on_herodies_body_entered(body: Node2D) -> void:
 	if body.name == "player":
